@@ -1,0 +1,339 @@
+Exercice 1
+          Algorithme division;
+		  var 
+		     a,b,quotient,reste : entier
+			 ratio : reel
+		  Debut
+		       Ecrire("la valeur de a")
+			   lire(a)
+			   Ecrire("la valeur de b")
+			   lire(b)
+			   
+			   Si (b!=0) alors
+					  quotient <- a div b
+					  afficher("le quotient est : ", quotient)
+					  reste <- a % b
+					  afficher("le reste est : ", reste)
+					  ratio <- a/b
+					  afficher("le quotient réel est : ", ratio)
+			   Sinon
+					  afficher("division impossible")
+			   FinSi
+		  Fin
+-----------------------------------------------------------------------------------------------------
+Exercice 2
+          Algorithme cercle;
+		  Const PI = 4*atan(1)
+		  var
+		     rayon, surface, perimetre : reel
+		  Debut
+			   Ecrire("Donner le rayon")
+			   lire(rayon)
+			   surface <- PI * rayon * rayon
+			   perimetre <- 2 * PI * rayon
+			   afficher("la surface est : ", surface)	   
+	           afficher("la perimetre est : ", perimetre)
+		  FIN
+-----------------------------------------------------------------------------------------------------
+Exercice 3 
+       Version 1:
+	             Algorithme Resistance;
+				   var
+				      R1, R2, R3 : reel
+					  RSerie, RParallele : reel
+				   Debut
+				      Ecrire("R1 :"); lire(R1)
+					  Ecrire("R2 :"); lire(R2)
+					  Ecrire("R3 :"); lire(R3)
+					  RSerie <- R1 + R2 + R3
+					  afficher("RSerie", RSerie)
+					  RParallele <- (R1*R2*R3) / (R1*R2 + R2*R3 + R1*R3)
+                      afficher("RParallele", RParallele)
+                  FIN
+				                  ------------------
+		Version 2:
+		         Algorithme Resistance;
+				 var
+				    R1, R2, R3, R : reel
+					choix : entier
+				 Debut
+				      Ecrire("R1 :") lire(R1)
+					  Ecrire("R2 :") lire(R2)
+					  Ecrire("R3 :") lire(R3)
+					  Ecrire("saississer une valeur (1 ou 2) pour votre choix")
+					  Lire(choix)
+					  Si (choix = 1) alors
+					      R <- R1 + R2 + R3
+					      afficher("la frequence est en serie, sa valeur est : ", R)
+					  Sinon Si (choix=2) alors
+                          R <- (R1*R2*R3) / (R1*R2 + R2*R3 + R1*R3)					  
+				          afficher("la frequence est en parallele, sa valeur est : ", R)
+					  FinSi
+				 Fin
+-----------------------------------------------------------------------------------------------------
+Exercice 4
+          Version 1
+                   Algorithme puissance;
+                   var
+                       x, puissance_x : reel
+                       n : entier
+                   Debut 
+                       Ecrire("La valeur de x : ") Lire(x)
+					   Ecrire("La valeur de n : ") Lire(n)
+					   puissance_x <- pow(x,n)
+					   afficher("x puissance n egal : ", puissance_x)
+				   FIN 
+				                      ----------------------------
+		  Version 2
+		           Algorithme puissance;
+                   var
+                       x, puissance_x : reel
+                       n,i : entier
+                   Debut 
+						Ecrire("La valeur de x : "); Lire(x)
+						Ecrire("La valeur de n : "); Lire(n)
+				        puissance_x <- 1
+						Pour i<- 1 à n 
+						   puissance_x <- puissance_x * x 
+						FinPour
+						afficher("x puissance n egal : ", puissance_x)
+				   Fin
+------------------------------------------------------------------------------------------------------------------
+Exercice 5
+          Algorithme Somme;
+		  var
+		     nombre, i, somme : entier
+			 Debut
+			     somme <- 0
+				 Pour i <- 1 à 5
+				    Ecrire("Donner un nombre : ")
+					Lire(nombre)
+					somme <- somme + nombre;
+				 FinPour
+				 afficher(" la somme des 5 nombres est : ", somme)
+		     Fin
+------------------------------------------------------------------------------------------------------------------
+Exercice 6
+         Algorithme distance;
+		 var x1, x2, y1, y2, distance : reel
+		 Debut
+		     Ecrire("Donner l'abscisse du point A  : ") 
+			 Lire(x1)
+			 Ecrire("Donner l'ordonne du point A  : ") 
+			 Lire(y1)
+			 Ecrire("Donner l'abscisse du point B  : ") 
+			 Lire(x2)
+			 Ecrire("Donner l'ordonne du point B  : ")  
+			 Lire(y2)
+			 distance <- sqrt((x1-x2)*2 + (y1-y2)*2)
+			 afficher("La distance entre le point A et le point B est : ", distance)
+		 Fin
+		 		 	 
+-----------------------------------------------------------------------------------------------------------------			 
+Exercice 7
+           Algorithme billets;
+			var
+      			montant, reste : entier
+                billet_20, billet_10, billet_5 : entier
+                piece_2, piece_1 : entier
+           Debut 
+                Ecrire("Entrer un montant : ")
+                Lire(montant)
+				
+				  billet_20 <- montant div 20 
+				  reste <- montant mod 20     ou reste <- montant – (20 * billet_20) 
+				  billet_10 <- reste div 10 
+				  reste <- reste mod 10 
+				  billet_5 <- reste div 5 
+				  reste <- reste mod 5 
+				  piece_2 <- reste div 2 
+				  reste <- reste mod 2 
+				  piece_1 <- reste 
+					afficher(" le montant ", montant," décomposé en euros donne :")
+					afficher("billets de 20", billet_20) 			
+					afficher("billets de 10", billet_10)		   
+					afficher("billets de 5", billet_5)	
+					afficher("pieces de 2", piece_2)
+					afficher("pieces de 1", piece_1)	
+            FIN			
+------------------------------------------------------------------------------------------------
+Exercice 8
+         Algorithme second_degré;
+            var
+			   a, b, c : reel
+               x1, x2, delta : reel	
+            Debut
+			     Ecrire(" la valeur de a : ") Lire(a)
+				 Ecrire(" la valeur de b : ") Lire(b)
+				 Ecrire(" la valeur de c : ") Lire(c)
+                SI (a=0) alors	
+                    Ecrire("L'equation est du premier degre")
+                    SI (b!=0) alors
+                        Ecrire(" La solution est : ", -c/b)
+                    SINON Ecrire ("Pas de solution")
+                    FINSI	
+                SINON
+                    delta <- (b*b) - (4*a*c)
+                    SI (delta > 0) alors
+                        x1 <- (- b - sqrt(delta)) / 2*a	
+						x2 <- (- b + sqrt(delta)) / 2*a	
+						Ecrire("les solutions de l'equation sont : ", x1, " et ",x2)
+					SINON
+					     SI (delta = 0) alors
+						     Ecrire(" la solution est : ", -b / (2*a))
+						 SINON 
+						     Ecrire("Pas de solution reel")
+						 FINSI
+						 
+					FINSI
+					
+				FINSI
+				
+			FIN
+-----------------------------------------------------------------------------------------------------------------
+Exercice 9
+           Algorithme Vol;
+		       var
+			      h_depart, h_arrive, min_depart, min_arrive : entier;
+				  h_duree, min_duree : entier;
+			   Debut
+			      Ecrire("Entrer l'heure de depart : ") 
+				  Lire(h_depart)
+				  Ecrire("Entrer la minute de depart : ") 
+				  Lire(min_depart)
+				  Ecrire("Entrer l'heure d'arrive : ") 
+				  Lire(h_arrive)
+				  Ecrire("Entrer la minute d'arrive : ") 
+				  Lire(min_arrive)
+//---hypotese a---   
+                  SI(h2 > h1)
+						  SI(min_arrive > min_depart) alors
+							  h_duree <- h_arrive - h_depart
+							  min_duree <- min_arrive - min_depart
+							  Ecrire("la duree du vol est : ", h_duree, " : ", min_duree)
+						  SINON
+							  h_duree <- h_arrive - h_depart - 1
+							  min_duree <- min_arrive + 60 - min_depart
+							  Ecrire("la duree du vol est : ", h_duree, " : ", min_duree)
+						  FINSI
+//hypothese b 	  SINON
+                          SI(min_arrive > min_depart) alors
+							  h_duree <- h_arrive - h_depart + 24
+							  min_duree <- min_arrive - min_depart
+							  Ecrire("la duree du vol est : ", h_duree, " : ", min_duree)
+						  SINON
+							  h_duree <- h_arrive - h_depart + 24 - 1
+							  min_duree <- min_arrive + 60 - min_depart
+							  Ecrire("la duree du vol est : ", h_duree, " : ", min_duree)
+						  FINSI
+
+			   Fin
+--------------------------------------------------------------------------------------------------------------------
+Exercice 10 
+           Algorithme tri;
+            var A , B, C : entier
+			nombr : entier
+           Debut
+                Ecrire("La valeur de A : ");
+                Lire(A);
+                Ecrire("La valeur de B : ");
+                Lire(B);
+                Ecrire("La valeur de C : ");
+                Lire(C);	
+                SI(A > B) alors
+				     nombr <- A
+					 A <- B
+					 B <- nombr
+				FINSI
+				SI(A > C) alors
+				     nombr <- A
+					 A <- C
+					 C <- nombr
+			    FINSI
+				SI(B > C) alors
+				     nombr <- B
+					 B <- C
+					 C <- nombr
+				FINSI
+			afficher(" A : ", A, " B : ", B, " C : ", C)
+			FIN
+------------------------------------------------------------------------------------------------------------------------------
+Exercice 11 :
+            Algorithme 
+                     var
+                         a, b : entier
+                         op : caractere
+                     Debut
+                    		Ecrire("la valeur de a : ")
+							lire(a)
+							Ecrire("l'operateur : ")
+							lire(a)
+							Ecrire("la valeur de b : ")
+							lire(b)		
+                        SELONQUE :	
+                          op = ' + ' : Ecrire("l'addition de a par b est : ", a + b)
+						  op = ' - ' : Ecrire("la soustraction de a par b est : ", a - b)
+						  op = ' * ' : Ecrire("la multiplication de a par b est : ", a * b)
+						  op = ' / ' : SI(b=0) alors
+						                   Ecrire("division impossible")
+									   SINON
+						                   Ecrire("la division de a par b est : ", a / b)
+						  default :
+						         Ecrire("operation impossible!")
+					    FINSELONQUE
+					  FIN
+------------------------------------------------------------------------------------------------------------------------------
+Exercice 12 : 
+             Algorithme nombre_parfait;
+			    var
+				    i, reste, somme, nombre : entier
+				Debut
+				    Ecrire("Donner un nombre : ")
+					Lire(nombre)
+					somme <- 0
+					Pour i <- 1 à (nombr div 2)
+					     reste <- nombr % i
+						 SI(reste = 0)
+						      somme <- somme + i
+						 FINSI
+					FINPour
+					SI(somme = nombr)
+					     Ecrire(nombr, " est parfait ")
+					SINON
+					     Ecrire(nombr, " n'est pas parfait")
+					FINSI
+				FIN
+------------------------------------------------------------------------------------------------------------------------------
+Exercice 13 :
+             Algorithme date;
+                 var
+                    j, m, a, max : entier	
+					temp : booleen
+				 Debut
+						temp <- true
+						max <- 31
+						Ecrire("Donner le jour : ") Lire(j)					
+						Ecrire("Donner le mois : ") Lire(m)		  
+						Ecrire("Donner l'annee : ") Lire(a)
+						SI((a >= 1000) ET (a <= 2020))
+								 SELONQUE(m) :
+											case 1 :
+											case 3 :
+											case 5 :
+											case 7 :
+											case 8 :
+											case 10 :
+											case 12 : max = 31
+												   break
+											case 4 :
+											case 6 :
+											case 9 :
+											case 11 : max = 30
+												   break
+											case 2 : max = 28
+												   break
+											default : temp <- false
+								 FINSELONQUE
+							(temp ET((j >= 1) ET (j <= max))) ? Ecrire("la date est valide"):Ecrire("la date est invalide")
+				        FINSI
+				 FIN                 									 
