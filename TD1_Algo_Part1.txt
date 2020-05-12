@@ -267,7 +267,7 @@ Exercice 11 :
                     		Ecrire("la valeur de a : ")
 							lire(a)
 							Ecrire("l'operateur : ")
-							lire(a)
+							lire(op)
 							Ecrire("la valeur de b : ")
 							lire(b)		
                         SELONQUE :	
