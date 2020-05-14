@@ -1,0 +1,306 @@
+Exercice 14 :
+             Algorithme annee_bissextile;
+			   var
+			      jour, mois, annee : entier
+			   Debut
+			      Ecrire("Donner le jour : ")
+				  Lire(jour)
+				  Ecrire("Donner le mois : ")
+				  Lire(mois)
+			      Ecrire("Donner l'annee : ")
+				  Lire(annee)
+				  SI((annee % 4 = 0) ET ((annee % 100 != 0) ou (annee % 400 = 0))) alors
+				     Ecrire("L'annee ", annee, "est bissextile")
+				  SINON
+				     Ecrire("L'annee ", annee," n'est pas bissextile")
+				  FINSI
+			  FIN
+--------------------------------------------------------------------------------------------------------------------------------
+Exercice 15 :
+             Algorithme somme_entier;
+			     var
+				    nombr, i, somme : entier
+				 Debut
+				   somme <-0
+					Ecrire("Donner un nombre")
+					Lire(nombr)
+				  Pour i <- 1 à nombr Faire
+				       somme <- somme + i
+				  FinPour
+                  Ecrire("la somme des entiers de 1 à ", nombr, " est : ", somme)
+				 Fin
+				 -------------------------
+			 Algorithme moyenne;
+			     var
+				    nombr, i, somme, moyenne : entier
+				 Debut
+				   somme <-0
+			       Ecrire("Donner un nombre")
+				   Lire(nombr)
+				   Pour i <- 1 à nombr Faire
+				       somme <- somme + i
+				   FinPour
+				   moyenne <- somme / nombr
+				   Ecrire("la moyenne des entiers de 1 à ", nombr, " est : ",moyenne)
+				  Fin
+--------------------------------------------------------------------------------------------------------------------------------
+Exercice 16 :
+              Algorithme division_soustrac_successif;	
+                      var
+                         quotient, reste, a, b : entier
+                      Debut
+                         Ecrire("Donner la valeur de a : ")
+                         Lire(a)
+                         Ecrire("Donner la valeur de b : ")
+                         Lire(b)
+                         quotient <- 0
+                         Tantque(a >= b) Faire
+						    a <- a - b
+							quotient <- quotient + 1
+						 FinTantque
+						 Ecrire("la division de a par b est : ", quotient)
+					  Fin
+--------------------------------------------------------------------------------------------------------------------------------
+Exercice 17 :
+              Algorithme 	PGCD;
+			           var
+					      a, b, pgcd : entier
+					   Debut
+						 Ecrire("Donner l'entier a : ")
+                         Lire(a)
+                         Ecrire("Donner l'entier b : ")
+                         Lire(b)
+						 Tantque(a!=b) Faire
+						     SI(a > b) alors
+							    a <- a - b
+							 SINON 
+							    b <- b - a
+							 FINSI
+						 FinTantque
+						 pgcd = a
+						 Ecrire("le PGCD de (", a, b, ") est : ", pgcd)
+					   Fin
+--------------------------------------------------------------------------------------------------------------------------------
+Exercice 18 
+             Algorithme PPCM;
+			           var
+					      a, b, ppcm, x, y : entier
+					   Debut
+							 Ecrire("Donner l'entier a : ")
+							 Lire(a)
+							 Ecrire("Donner l'entier b : ")
+							 Lire(b)   
+							 x <- a
+							 y <- b
+							 Tantque(a != b) Faire
+								 SI(x < y) alors
+									x <- x + a
+								 SINON
+									y <- y + b
+								 FINSI
+							 FinTantque
+							 ppcm <- x
+							 Ecrire("le PPMC de (", a, b, ") est : ", ppmc)
+					   Fin
+--------------------------------------------------------------------------------------------------
+Exercice 19
+           Algorithme somme_prix;
+		     Var 
+			    prix, somme : entier
+			 Debut
+			 Ecrire("entrer le prix du premier : ") 
+			 Lire(prix)
+			 somme <- 0 
+			 Tantque(p!=0) Faire
+			      somme <- somme + prix 
+				  Ecrire("entrer le prix du suivant ( 0 si FIN)")  
+				  Lire(prix)
+			 FinTantque
+			      Ecrire(" La somme des prix des articles est ", somme) 
+			 FIN
+-------------------------------------------------------------------------------------------------
+Exercice 20
+           Algorithme  Plus_grand
+		   Const  nbr=10 
+		   Var        
+		   indice, val : entier  
+		   Indice_Plus_grand : entier 
+		   max : entier  
+		   Debut
+		        Ecrire("Entrez le premier nombre :") 
+				Lire(val) 
+				Indice_Plus_grand <- 1 
+				max  <- val 
+				indice <- 2 
+				Pour indice <- 2 à nbr 
+					Ecrire("Entrez le nombre numero", indice)  
+					Lire(val)  
+					SI val >  max  alors 
+						  Indice_Plus_grand <- indice  
+						  max <- val  
+			        FINSI 
+				FINPour
+				Ecrire("le plus grand de ces nombres est:", max) 
+				Ecrire(" c'est le nombre numero :", Indice_Plus_grand) 
+		   Fin	   
+-------------------------------------------------------------------------------------------------------------------------------
+Exercice 21
+            Algorithme jeu;
+			var
+			   a, b, i : entier
+			Debut
+			    Ecrire("Entrer la valeur saisi par le premier utilisateur")
+				Lire(a)
+				Ecrire("Entrer le nombre déviné par le second utilisateur")
+				Lire(b)
+				i <- 1
+				Tantque(a != b) Faire
+				     SI(b > a)
+					     Ecrire("plus grand que le nombre recherché")
+					 SINON
+					     Ecrire("plus petit que le nombre recherché")
+					 FINSI
+					 i <- i + 1
+					 Ecrire("Entrer un autre nombre : ")
+					 Lire(b)
+				FinTantque
+				Ecrire("vous avez trouvé le nombre aprés", i, " tentatives")
+			Fin
+-------------------------------------------------------------------------------------------------------------------------------					 
+Exercice 22
+           Algorithme longue_sequence;	
+		        var
+				   N, a, i,j : entier
+				   indice_seq_courant, indice_seq_long, longueur_seq : entier
+			    tableau t [N] en entier
+				Debut
+				   Repeter
+				          Ecrire("donner le nombre d'entiers à saisir dans notre tableau: ")
+						  Lire(N)
+				   Jusqu'a((N >= 10) ET (N <= 50))
+				   Pour i <- 0 à N-1 Faire
+				       Ecrire("Donner le ", i + 1," eme entier : ")
+					   Lire t[i]
+				   FINPour
+				   j <- 0
+				   Pour i <- 0 à N-1 Faire                         // pour parcourir le tableau
+				        SI(t[i+1] > t[i]) alors
+						     indice_seq_courant = i
+							 Tantque((i<n) ET (t[i+1] > t[i])) Faire    // pour parcourir la sequence
+							        i <- i+1
+									j <- j+1
+							 FinTantque
+						FINSI
+						SI(longueur_seq <= j) alors
+						     indice_seq_long <- indice_seq_courant
+							 longueur_seq <- j
+						FINSI
+				   FINPour
+				   Ecrire("La plus longue sequence est ", t[indice_seq_long]..t[longueur_seq], " qui debute à la position ", 
+				              indice_seq_long, " et sa longueur est ", longueur_seq)
+				Fin				    
+-------------------------------------------------------------------------------------------------------------------------------
+Exercice 23
+           Algorithme lapin;
+		   var
+		       f_0, f_1, f, i : entier
+			Debut
+				f_0 <- 2
+				f_1 <- 2
+				Pour i <-2 à 12 Faire
+					f <- f_0 + f_1
+					f_0 <- f_1
+					f_1 <- f
+				FINPour
+				Ecrire("Au bout de 12 mois on aura ", f, "lapins")
+    		Fin	
+			
+-------------------------------------------------------------------------------------------------------------------------------
+Exercice 24
+           Algorithme secret;
+               var
+			   a, b, i : entier
+			Debut
+			    Ecrire("Entrer la valeur saisi par le premier utilisateur")
+				Lire(a)
+				Ecrire("Entrer le nombre déviné par le second utilisateur")
+				Lire(b)
+				i <- 1
+				Tantque(a != b) Faire
+				     SI(b > a)
+					     Ecrire("Trop grand")
+					 SINON
+					     Ecrire("trop petit")
+					 FINSI
+					 i <- i + 1
+					 Ecrire("Entrer un autre nombre : ")
+					 Lire(b)
+				FinTantque
+				Ecrire("vous avez trouvé le nombre aprés", i, " tentatives")
+			Fin
+-------------------------------------------------------------------------------------------------------------------------------
+Exercice 25 :
+          #include <stdio.h> 
+            int main() {
+	                    int i,j;
+	                    for(i=1;i<=10;i++) {
+	     	                  for(j=1;j<=i;j++){
+	     	   	                     printf("%d", i);
+				                       }
+				                    printf("\n");
+		                           }
+		                  return 0;
+                        }
+		                                       ------------------------
+			Algorithme nombre_premier;
+			    var
+				   nombre, i, b : entier
+				Debut
+				    Ecrire("Entrer un nombre : ")
+					Lire(nombre)
+					b = 0
+					Pour i <- 2 à sqrt(nombr) Faire
+					    SI(nombre % i = 0) alors
+						    b = 1
+						FINSI
+						SI(b = 1) alors
+							   Ecrire(nombre, " est premier ")
+							SINON
+							   Ecrire(nombre, " n'est premier pas ")
+                  		FINSI
+                    FINPour
+                Fin	
+-------------------------------------------------------------------------------------------------------------------------------
+Exercice 26
+            Algorithme croissant_decroissant;
+			var
+			   nbr, i : entier
+			   croissant, decroissant : booleen
+			Tableau 
+			    t(nbr) en entier
+			Debut
+			    croissant <- true
+				decroissant <- true
+				
+				Ecrire("Donner le nombre de valeurs à saisir : ")
+				Lire(nbr)
+				Pour i <- 0 à nbr - 1 Faire
+				    Ecrire("Entrer le nombre n° ", i+1)
+					Lire t[i]
+				FINPour
+				Pour i <- 0 à nbr - 1 Faire
+				     SI(t[i] > t[i+1]) alors
+					    croissant <- false
+					 FINSI
+					 SI(t[i] < t[i+1]) alors
+					    decroissant <- false
+					 FINSI
+				FINPour
+				SI((croissant) ET NON(decroissant)) alors
+				      Ecrire("le tableau est croissant")
+				SINON SI(NON(croissant) ET (decroissant))
+				      Ecrire("le tableau est decroissant")
+				SINON
+				      Ecrire("le tableau est quelconque")
+           		FINSI
+            Fin				
