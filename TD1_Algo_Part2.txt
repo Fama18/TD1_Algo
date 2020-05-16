@@ -179,8 +179,10 @@ Exercice 22
 						  Lire(N)
 				   Jusqu'a((N >= 10) ET (N <= 50))
 				   Pour i <- 0 à N-1 Faire
+                                        Repeter
 				       Ecrire("Donner le ", i + 1," eme entier : ")
 					   Lire t[i]
+                                       Jusqu'a((t[i] >= 1) ET (t[i] <= 100))
 				   FINPour
 				   j <- 0
 				   Pour i <- 0 à N-1 Faire                         // pour parcourir le tableau
