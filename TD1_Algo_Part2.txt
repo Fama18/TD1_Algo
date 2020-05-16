@@ -261,7 +261,7 @@ Exercice 25 :
 				    Ecrire("Entrer un nombre : ")
 					Lire(nombre)
 					b = 0
-					Pour i <- 2 à sqrt(nombr) Faire
+					Pour i <- 2 à nombre Faire
 					    SI(nombre % i = 0) alors
 						    b = 1
 						FINSI
