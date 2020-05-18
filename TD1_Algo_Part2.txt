@@ -203,6 +203,7 @@ Exercice 22
 				Fin				    
 -------------------------------------------------------------------------------------------------------------------------------
 Exercice 23
+//question 1
            Algorithme lapin;
 		   var
 		       f_0, f_1, f, i : entier
@@ -216,7 +217,24 @@ Exercice 23
 				FINPour
 				Ecrire("Au bout de 12 mois on aura ", f, "lapins")
     		Fin	
-			
+//question 2
+           Algorithme lapin;
+		   var
+		       f_0, f_1, f, i : entier
+			Debut
+			    f <- 0
+				f_0 <- 2
+				f_1 <- 2
+				i <- 0
+				Repeter 
+				    f <- f_0 + f_1
+					f_0 <- f_1
+					f_1 <- f
+					i <- i + 1
+				jusqu'a(f==1000000000)
+				Ecrire("on aura 1000000000 de lapins au ", i ," eme mois");
+			Fin
+						
 -------------------------------------------------------------------------------------------------------------------------------
 Exercice 24
            Algorithme secret;
